@@ -1,0 +1,32 @@
+{
+  "name": "film",
+  "version": "1.0.0",
+  "description": "A film website by nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Perlou/film-node-mongodb.git"
+  },
+  "keywords": [
+    "node",
+    "mongodb"
+  ],
+  "author": "Perlou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Perlou/film-node-mongodb/issues"
+  },
+  "homepage": "https://github.com/Perlou/film-node-mongodb#readme",
+  "devDependencies": {
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "jade": "^1.11.0",
+    "moment": "^2.13.0",
+    "mongoose": "^4.4.17",
+    "underscore": "^1.8.3"
+  }
+}
