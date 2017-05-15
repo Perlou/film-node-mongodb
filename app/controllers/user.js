@@ -22,19 +22,77 @@ exports.showSignin = function (req, res) {
  * 注册
  */
 exports.signup = function (req, res) {
+    var _user = req.body.user
 
+    User.findOne({
+        name: _user.name
+    }, function (err, user) {
+        if (err) {
+            console.log(err)
+        }
+
+        if (user) {
+            return res.redirect('/signin')
+        } else {
+            user = new User(_user)
+            user.save(function (err, user) {
+                if (err) {
+                    console.log(err)
+                }
+
+                res.redirect('/')
+            })
+        }
+    })
 }
 
 /**
  * 登录
  */
 exports.signin = function (req, res) {
+    var _user = req.body.user
+    var name = _user.name
+    var password = _user.password
 
+    User.findOne({
+
+    }, function (err, user) {
+        if (err) {
+            console.log(err)
+        }
+
+        if (!user) {
+            return res.redirect('/signup')
+        }
+
+        user.comparePassword(password, function (err, isMatch) {
+            if (err) {
+                console.log(err)
+            } 
+
+            if (isMatch) {
+                req.session.user = user
+                return res.redirect('/')
+            } else {
+                return res.redirect('/signin')
+            }
+        })
+    })
 }
 
 /**
  * 登出 logout
  */
 exports.logout = function (req, res) {
+    delete req.session.user
+
+    res.redirect('/')
+}
+
+/**
+ * 用户列表
+ */
+exports.list = function (req, res) {
     
 }
+
