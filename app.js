@@ -13,7 +13,7 @@ app.set('view engine', 'jade')
 
 app.get('/', function (req, res) {
   res.render('index', {
-    title: 'imooc 首页'
+    title: 'film 首页'
   })
 })
 
