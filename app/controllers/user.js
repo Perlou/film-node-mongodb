@@ -93,6 +93,35 @@ exports.logout = function (req, res) {
  * 用户列表
  */
 exports.list = function (req, res) {
-    
+    User.fetch(function (err, users) {
+        if (err) {
+            console.log(err)
+        }
+
+        res.render('userlist', {
+            title: '用户列表',
+            users: users
+        })
+    })
+}
+
+exports.signinRequired = function (req, res, next) {
+    var user = req.session.user
+
+    if (!user) {
+        return res.redirect('/signin')
+    }
+
+    next()
+}
+
+exports.adminRequired = function (req, res, next) {
+    var user = req.session.user
+
+    // if (user.role <= 10) {
+    //     return res.redirect('/signin')
+    // }
+
+    next()
 }
 

@@ -25,5 +25,5 @@ module.exports = function (app) {
     app.get('/signin', User.showSignin)
     app.get('/signup', User.showSignup)
     app.get('/logout', User.logout)
-    // app.get('')
+    app.get('/admin/user/list', User.signinRequired, User.adminRequired, User.list)
 }
