@@ -1,24 +1,23 @@
 {
   "name": "film",
-  "description": "A film website by nodejs",
-  "main": "app.js",
+  "version": "0.0.1",
   "authors": [
-    "Perlou"
+    "Scott"
   ],
-  "license": "ISC",
+  "description": "movies",
   "keywords": [
-    "node",
-    "mongodb"
+    "movies"
   ],
-  "homepage": "https://github.com/Perlou/film-node-mongodb",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "public/libs",
     "test",
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.6"
+    "bootstrap": "~3.1.0"
   }
 }

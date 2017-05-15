@@ -1,32 +1,42 @@
 {
   "name": "film",
-  "version": "1.0.0",
-  "description": "A film website by nodejs",
+  "version": "0.2.0",
+  "description": "film node",
   "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "async": "~0.2.10",
+    "bcrypt": "^0.8.7",
+    "connect-mongo": "~0.3.3",
+    "crypto": "~0.0.3",
+    "express": "~3.4.8",
+    "grunt": "~0.4.5",
+    "grunt-concurrent": "~0.4.3",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-less": "~0.11.4",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-mocha-test": "~0.11.0",
+    "grunt-nodemon": "~0.1.2",
+    "jade": "^1.11.0",
+    "latest": "~0.1.2",
+    "moment": "~2.5.1",
+    "mongoose": "^4.8.2",
+    "underscore": "~1.6.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Perlou/film-node-mongodb.git"
+    "url": "https://git.oschina.net/wolf18387/imooc-movie.git"
   },
   "keywords": [
-    "node",
-    "mongodb"
+    "lessonns"
   ],
   "author": "Perlou",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Perlou/film-node-mongodb/issues"
-  },
-  "homepage": "https://github.com/Perlou/film-node-mongodb#readme",
-  "devDependencies": {
-    "express": "^4.13.4",
-    "gulp": "^3.9.1",
-    "jade": "^1.11.0",
-    "moment": "^2.13.0",
-    "mongoose": "^4.4.17",
-    "underscore": "^1.8.3"
-  }
+  "license": "MIT"
 }
