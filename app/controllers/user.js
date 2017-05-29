@@ -55,7 +55,7 @@ exports.signin = function (req, res) {
     var password = _user.password
 
     User.findOne({
-
+        name: name
     }, function (err, user) {
         if (err) {
             console.log(err)
